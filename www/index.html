@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>My List</title>
+		
+		<!-- <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1"> -->
+		<meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+		<meta charset="utf-8">
+        
+        <script type='text/javascript' src='js/jquery-2.1.1.js'></script>
+        <script type="text/javascript" src='js/floating-1.12.js'></script>
+        <script type="text/javascript" src='js/jquery.mobile.min.js'></script>
+        <script type="text/javascript" src='js/jquery-ui.min.js'></script>
+        <script type="text/javascript" src='cordova.js'></script>
+
+        <!-- Load my js -->
+	    <script type='text/javascript' src='js/utilities.js'></script>
+	    <script type='text/javascript' src='js/phonegap-utilities.js'></script>
+	    <script type='text/javascript' src='js/admob.js'></script>
+	    
+        <link rel='stylesheet' type='text/css' href='css/jquery-ui.css'/>
+        <link rel='stylesheet' type='text/css' href='css/stylesheet.css'/>
+
+	</head>
+	<body onload="onDocLoad()">
+		<div id="iosStatusBar" style="height:20px"></div>
+		<div id="outerDiv">
+			<div id="bodyDiv">
+				<table style="width:100%">
+			        <!-- Header -->
+			        
+                    <tr><div id="aboutButton">?</div></tr>
+                    
+                    <tr><div id="addItemButton">+</div></tr>
+                    <tr><h1 id="headerTD">My List</h1></tr>
+			        <!-- Items -->
+			        <tr><td>
+			        	<div id="itemsCanvas"></div>
+			        </td></tr>
+			        
+				</table>
+				
+			</div>
+		</div>
+	</body>	  
+
+    <!-- Add Item floating menu -->
+    <div id="editDialog"> </div>
+    <div id="aboutDialog"> 
+    	<p style="margin: 0">My List - version 1.0<br><br>
+        Instructions:<br>
+        Add a new item using the + button.<br>
+        Mark item as done by taping it.<br>
+        Remove item by swiping it.<br></p>
+    	<a href="#" onclick="window.open('mailto:gshirkan@gmail.com?subject=My List application contact', '_system', 'location=yes')" style="outline:none">Contact us</a>
+    </div>
+	<div id="addItemDialog">
+		<table id="addItemsTable">
+			<tr id="valueTR">
+				<td>
+					<input type="text" id="itemData"/>
+				</td>
+			</tr>
+		</table>
+	</div>	
+	<script type='text/javascript' src='js/mylist.js'></script>
+	
+</html>
