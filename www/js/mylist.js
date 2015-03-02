@@ -30,12 +30,17 @@ const $aboutDialog = $('#aboutDialog');
 //	items canvas
 function initList () {
 	var list = LSlistGet();
+	console.log("------------------------------list size is " + list.length + " and list is: " + list);
 	list.forEach(function (id, i) {
+		console.log("------------ID is: " + id)
 		addItemToCanvas(JSON.parse(LSlistGetKey(LSlistGet(i))), id);
 	});
 }
 
 function addItemToCanvas(val, id) {
+
+	console.log("------------ID is: " + id + " AND VAL: " + val);
+
 	var text = val.text;
 	var isDone = val.isDone ? " style='text-decoration: line-through' ": "";
 

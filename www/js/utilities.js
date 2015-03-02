@@ -63,8 +63,17 @@
 
 	function LSlistGet(index) {
 		var l = localStorage.getItem("list");
+		// console.log("============*****========== list is: " + l + " with size: " + l.length);
 		if (l === null) return [];
-		l = l.split(',');
+		if (l === " " || l === "" || l === null) {
+			// console.log("====================== list is ' '");
+			l = [];
+			// console.log("===========111=========== list is: " + l + " with size: " + l.length);
+			return [];
+		} else {
+			l = l.split(',').filter(function(n){ return n != "" });	
+			// console.log("============222========== list is: " + l + " with size: " + l.length);
+		}
 
 		// var list = [];
 		// for (var i = 0; i < l.length; i++) {
@@ -81,8 +90,11 @@
 	function LSlistAdd(key, val) {
 		localStorage.setItem(key, val);
 		var l = LSlistGet();
+		// console.log("============333========== list is: " + l + " with size: " + l.length);
 		l.push(key);
+		// console.log("============444========== list is: " + l + " with size: " + l.length);
 		LSlistSave(l);
+		// console.log("============555========== list is: " + l + " with size: " + l.length);
 	}
 
 	function LSlistRemove(id) {
