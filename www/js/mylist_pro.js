@@ -12,7 +12,7 @@ var numitems = ( localStorage.numitems ? localStorage.numitems : 0);
 var colors = [(localStorage.colors0 ? localStorage.colors0 : "white"), (localStorage.colors1 ? localStorage.colors1 : "black")];
 
 // Numeric value constants
-const adMobBannerPct = .83;
+const adMobBannerPct = .90;
 
 //	Aliasing
 const $body = $('body');
@@ -247,11 +247,11 @@ $(document).ready( function () {
 
 function openMail(subject) {
     if (isAndroid()) {
-        window.open('mailto:gshirkan@gmail.com?subject=My List application contact (Android)', '_system', 'location=yes');
+        window.open('mailto:gshirkan@gmail.com?subject=My List Pro application contact (Android)', '_system', 'location=yes');
     } else {
         cordova.plugins.email.open({
             to:      'gshirkan@gmail.com',
-            subject: 'My List application contact (iOS)'}
+            subject: 'My List Pro application contact (iOS)'}
         );
     }
 }

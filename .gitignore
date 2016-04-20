@@ -5,6 +5,11 @@ platforms/*
 plugins/*
 shirkan.keystore
 info.txt
+res/*
+appstore*
+mylist*key*
+keywords
+titles*
 
 # OS generated files #
 ######################
